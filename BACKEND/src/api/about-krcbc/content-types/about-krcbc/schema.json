@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_krcbcs",
+  "info": {
+    "singularName": "about-krcbc",
+    "pluralName": "about-krcbcs",
+    "displayName": "About KRCBC"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paragraph1": {
+      "type": "text"
+    },
+    "paragraph2": {
+      "type": "text"
+    },
+    "paragraph3": {
+      "type": "text"
+    },
+    "paragraph4": {
+      "type": "text"
+    },
+    "paragraph5": {
+      "type": "text"
+    }
+  }
+}

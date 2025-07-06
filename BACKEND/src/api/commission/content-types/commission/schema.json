@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commissions",
+  "info": {
+    "singularName": "commission",
+    "pluralName": "commissions",
+    "displayName": "Commission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "objectives": {
+      "type": "blocks"
+    },
+    "ChairmanImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ChairmanName": {
+      "type": "string"
+    },
+    "SecretaryImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SecretaryName": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "blocks"
+    }
+  }
+}

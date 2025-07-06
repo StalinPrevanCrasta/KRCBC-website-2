@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "desks",
+  "info": {
+    "singularName": "desk",
+    "pluralName": "desks",
+    "displayName": "Desk"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "objectives": {
+      "type": "blocks"
+    },
+    "ChairmanImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ChairmanName": {
+      "type": "string"
+    },
+    "SecretaryImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SecretaryName": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "blocks"
+    }
+  }
+}

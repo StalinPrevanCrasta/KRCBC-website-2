@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bishops",
+  "info": {
+    "singularName": "bishop",
+    "pluralName": "bishops",
+    "displayName": "Bishop"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Place": {
+      "type": "string"
+    },
+    "Position": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

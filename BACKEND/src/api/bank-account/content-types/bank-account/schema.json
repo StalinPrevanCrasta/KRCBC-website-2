@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "bank_accounts",
+  "info": {
+    "singularName": "bank-account",
+    "pluralName": "bank-accounts",
+    "displayName": "Bank Account"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accountName": {
+      "type": "string"
+    },
+    "accountNumber": {
+      "type": "string"
+    },
+    "ifscCode": {
+      "type": "string"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "upiId": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "mission_and_visions",
+  "info": {
+    "singularName": "mission-and-vision",
+    "pluralName": "mission-and-visions",
+    "displayName": "Mission-and-vision"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mission": {
+      "type": "text"
+    },
+    "vision": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featuredvideos",
+  "info": {
+    "singularName": "featuredvideo",
+    "pluralName": "featuredvideos",
+    "displayName": "Featuredvideo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumbnail_url": {
+      "type": "blocks"
+    }
+  }
+}
