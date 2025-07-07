@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Calendar as CalendarIcon, Clock, MapPin, Users, Filter } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -105,6 +106,19 @@ const Calendar = () => {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white">
+      <Helmet>
+        <title>Calendar - KRCBC</title>
+        <meta name="description" content="View the calendar of events for the Kerala Region of Catholic Bishops Conference (KRCBC). Stay updated with upcoming meetings, celebrations, and important dates." />
+        <meta name="keywords" content="KRCBC Calendar, Kerala Catholic Events, Church Calendar, Catholic Celebrations, KRCBC Events Schedule" />
+        <meta property="og:title" content="Calendar - KRCBC" />
+        <meta property="og:description" content="View the calendar of events for the Kerala Region of Catholic Bishops Conference (KRCBC). Stay updated with upcoming meetings, celebrations, and important dates." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://krcbc.in/calendar" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Calendar - KRCBC" />
+        <meta name="twitter:description" content="View the calendar of events for the Kerala Region of Catholic Bishops Conference (KRCBC). Stay updated with upcoming meetings, celebrations, and important dates." />
+        <link rel="canonical" href="https://krcbc.in/calendar" />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4">
           {/* Header */}

@@ -1,8 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicyPage = () => {
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white">
+      <Helmet>
+        <title>Privacy Policy - KRCBC</title>
+        <meta name="description" content="Read the privacy policy of the Kerala Region of Catholic Bishops Conference (KRCBC). Learn how we collect, use, and protect your personal information." />
+        <meta name="keywords" content="KRCBC Privacy Policy, Kerala Catholic Privacy, Data Protection, Privacy Statement, Information Security" />
+        <meta property="og:title" content="Privacy Policy - KRCBC" />
+        <meta property="og:description" content="Read the privacy policy of the Kerala Region of Catholic Bishops Conference (KRCBC). Learn how we collect, use, and protect your personal information." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://krcbc.in/privacy-policy" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy - KRCBC" />
+        <meta name="twitter:description" content="Read the privacy policy of the Kerala Region of Catholic Bishops Conference (KRCBC). Learn how we collect, use, and protect your personal information." />
+        <link rel="canonical" href="https://krcbc.in/privacy-policy" />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowLeft, Share2 } from 'lucide-react';
@@ -108,6 +109,21 @@ const NewsArticle = () => {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white">
+      <Helmet>
+        <title>{article?.title ? `${article.title} - KRCBC` : 'News Article - KRCBC'}</title>
+        <meta name="description" content={article?.excerpt ? article.excerpt : 'Read the latest news from the Kerala Region of Catholic Bishops Conference (KRCBC).'} />
+        <meta name="keywords" content={`KRCBC News, Kerala Catholic News, ${article?.title || 'News Article'}, Church News, Catholic Announcements`} />
+        <meta property="og:title" content={article?.title ? `${article.title} - KRCBC` : 'News Article - KRCBC'} />
+        <meta property="og:description" content={article?.excerpt ? article.excerpt : 'Read the latest news from the Kerala Region of Catholic Bishops Conference (KRCBC).'} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://krcbc.in/news/${id}`} />
+        {article?.image && <meta property="og:image" content={article.image} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={article?.title ? `${article.title} - KRCBC` : 'News Article - KRCBC'} />
+        <meta name="twitter:description" content={article?.excerpt ? article.excerpt : 'Read the latest news from the Kerala Region of Catholic Bishops Conference (KRCBC).'} />
+        {article?.image && <meta name="twitter:image" content={article.image} />}
+        <link rel="canonical" href={`https://krcbc.in/news/${id}`} />
+      </Helmet>
       <main className="py-8">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="mb-6">

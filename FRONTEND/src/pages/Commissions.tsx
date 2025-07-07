@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -55,6 +56,19 @@ const Commissions = () => {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white">
+      <Helmet>
+        <title>Commissions - KRCBC</title>
+        <meta name="description" content="Explore the various commissions of the Kerala Region of Catholic Bishops Conference (KRCBC), including Faith Formation, Education, Social Services, and more." />
+        <meta name="keywords" content="KRCBC Commissions, Kerala Catholic Commissions, Church Commissions, Faith Formation, Catholic Education, Social Services" />
+        <meta property="og:title" content="Commissions - KRCBC" />
+        <meta property="og:description" content="Explore the various commissions of the Kerala Region of Catholic Bishops Conference (KRCBC), including Faith Formation, Education, Social Services, and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://krcbc.in/commissions" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Commissions - KRCBC" />
+        <meta name="twitter:description" content="Explore the various commissions of the Kerala Region of Catholic Bishops Conference (KRCBC), including Faith Formation, Education, Social Services, and more." />
+        <link rel="canonical" href="https://krcbc.in/commissions" />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

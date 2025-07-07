@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { programs, Program } from '@/components/sections/Programs'; // Assuming programs is exported
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,6 +13,19 @@ const ProgramDetailPage = () => {
   if (!program) {
     return (
       <div className="min-h-screen relative bg-gradient-to-br to-white flex flex-col">
+        <Helmet>
+          <title>Program Not Found - KRCBC</title>
+          <meta name="description" content="The program you're looking for could not be found. Explore other programs offered by the Kerala Region of Catholic Bishops Conference (KRCBC)." />
+          <meta name="keywords" content="KRCBC Programs, Kerala Catholic Programs, Program Not Found" />
+          <meta property="og:title" content="Program Not Found - KRCBC" />
+          <meta property="og:description" content="The program you're looking for could not be found. Explore other programs offered by the Kerala Region of Catholic Bishops Conference (KRCBC)." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={`https://krcbc.in/programs/${slug}`} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Program Not Found - KRCBC" />
+          <meta name="twitter:description" content="The program you're looking for could not be found. Explore other programs offered by the Kerala Region of Catholic Bishops Conference (KRCBC)." />
+          <link rel="canonical" href={`https://krcbc.in/programs/${slug}`} />
+        </Helmet>
         <main className="flex-grow container mx-auto px-4 py-16 text-center">
           <h1 className="text-3xl font-bold text-gray-700 mb-4">Program Not Found</h1>
           <p className="text-gray-600 mb-8">
@@ -32,6 +46,19 @@ const ProgramDetailPage = () => {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white flex flex-col">
+      <Helmet>
+        <title>{program.title} - KRCBC Programs</title>
+        <meta name="description" content={program.description} />
+        <meta name="keywords" content={`KRCBC ${program.title}, Kerala Catholic Programs, ${program.title}, Church Programs, Catholic Education`} />
+        <meta property="og:title" content={`${program.title} - KRCBC Programs`} />
+        <meta property="og:description" content={program.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://krcbc.in/programs/${slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${program.title} - KRCBC Programs`} />
+        <meta name="twitter:description" content={program.description} />
+        <link rel="canonical" href={`https://krcbc.in/programs/${slug}`} />
+      </Helmet>
       <main className="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-4xl"> {/* Adjusted padding and max-width */}
         <div className="mb-6 md:mb-8"> {/* Adjusted margin */}
           <RouterLink to="/programs" className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm group">

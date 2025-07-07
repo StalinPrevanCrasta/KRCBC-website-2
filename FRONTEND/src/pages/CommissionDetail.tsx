@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -85,6 +86,19 @@ const CommissionDetail = () => {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white">
+      <Helmet>
+        <title>{commission?.name ? `${commission.name} - KRCBC Commission` : 'Commission Detail - KRCBC'}</title>
+        <meta name="description" content={commission?.description ? commission.description : 'Learn about this commission of the Kerala Region of Catholic Bishops Conference (KRCBC).'} />
+        <meta name="keywords" content={`KRCBC ${commission?.name || 'Commission'}, Kerala Catholic Commissions, ${commission?.name || 'Commission'}, Church Commissions, Catholic Activities`} />
+        <meta property="og:title" content={commission?.name ? `${commission.name} - KRCBC Commission` : 'Commission Detail - KRCBC'} />
+        <meta property="og:description" content={commission?.description ? commission.description : 'Learn about this commission of the Kerala Region of Catholic Bishops Conference (KRCBC).'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://krcbc.in/commissions/${slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={commission?.name ? `${commission.name} - KRCBC Commission` : 'Commission Detail - KRCBC'} />
+        <meta name="twitter:description" content={commission?.description ? commission.description : 'Learn about this commission of the Kerala Region of Catholic Bishops Conference (KRCBC).'} />
+        <link rel="canonical" href={`https://krcbc.in/commissions/${slug}`} />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">

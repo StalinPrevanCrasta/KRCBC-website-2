@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Home, ArrowLeft } from 'lucide-react';
@@ -9,6 +10,18 @@ import Footer from '@/components/sections/Footer';
 const NotFound = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Page Not Found - KRCBC</title>
+        <meta name="description" content="The page you're looking for doesn't exist or has been moved. Visit the Kerala Region of Catholic Bishops Conference (KRCBC) homepage to explore our content." />
+        <meta name="keywords" content="404 Error, Page Not Found, KRCBC, Kerala Catholic Bishops" />
+        <meta property="og:title" content="Page Not Found - KRCBC" />
+        <meta property="og:description" content="The page you're looking for doesn't exist or has been moved. Visit the Kerala Region of Catholic Bishops Conference (KRCBC) homepage to explore our content." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Page Not Found - KRCBC" />
+        <meta name="twitter:description" content="The page you're looking for doesn't exist or has been moved. Visit the Kerala Region of Catholic Bishops Conference (KRCBC) homepage to explore our content." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <main className="flex-1 flex items-center justify-center py-16">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-md mx-auto">

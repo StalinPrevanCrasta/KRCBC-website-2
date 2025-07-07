@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -53,7 +54,20 @@ const AllVideosPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+      <Helmet>
+        <title>All Videos - KRCBC</title>
+        <meta name="description" content="Watch all videos from the Kerala Region of Catholic Bishops Conference (KRCBC). Access our complete video library including masses, sermons, and religious content." />
+        <meta name="keywords" content="KRCBC Videos, Kerala Catholic Videos, Church Videos, Religious Videos, Catholic Media, Mass Videos" />
+        <meta property="og:title" content="All Videos - KRCBC" />
+        <meta property="og:description" content="Watch all videos from the Kerala Region of Catholic Bishops Conference (KRCBC). Access our complete video library including masses, sermons, and religious content." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://krcbc.in/all-videos" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="All Videos - KRCBC" />
+        <meta name="twitter:description" content="Watch all videos from the Kerala Region of Catholic Bishops Conference (KRCBC). Access our complete video library including masses, sermons, and religious content." />
+        <link rel="canonical" href="https://krcbc.in/all-videos" />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

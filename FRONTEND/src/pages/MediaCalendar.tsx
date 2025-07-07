@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Calendar as CalendarIcon, Clock, Play, Radio } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -138,7 +139,20 @@ const MediaCalendar = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen relative bg-gradient-to-br to-white p-4">
+      <Helmet>
+        <title>Media Calendar - KRCBC</title>
+        <meta name="description" content="View the media calendar for the Kerala Region of Catholic Bishops Conference (KRCBC). Find live streams, broadcasts, and upcoming media events." />
+        <meta name="keywords" content="KRCBC Media Calendar, Kerala Catholic Live Stream, Church Broadcasts, Religious Media, Catholic Media Schedule" />
+        <meta property="og:title" content="Media Calendar - KRCBC" />
+        <meta property="og:description" content="View the media calendar for the Kerala Region of Catholic Bishops Conference (KRCBC). Find live streams, broadcasts, and upcoming media events." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://krcbc.in/media-calendar" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Media Calendar - KRCBC" />
+        <meta name="twitter:description" content="View the media calendar for the Kerala Region of Catholic Bishops Conference (KRCBC). Find live streams, broadcasts, and upcoming media events." />
+        <link rel="canonical" href="https://krcbc.in/media-calendar" />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

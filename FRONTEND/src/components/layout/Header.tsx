@@ -53,7 +53,7 @@ const Header = () => {
     { 
       name: 'Resources', 
       href: '/resources', 
-      hasDropdown: true,
+      hasDropdown: false,
       submenu: [
         { name: 'Documents & Downloads', href: '/resources' },
         { name: 'Daily Prayers', href: '/faith' },

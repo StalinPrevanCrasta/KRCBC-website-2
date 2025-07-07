@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -40,6 +41,19 @@ const NewsListing = () => {
 
   return (
     <div className="min-h-screen relative bg-gradient-to-br to-white">
+      <Helmet>
+        <title>All News - KRCBC</title>
+        <meta name="description" content="Browse all news articles from the Kerala Region of Catholic Bishops Conference (KRCBC). Stay informed about our latest announcements, events, and community updates." />
+        <meta name="keywords" content="KRCBC News, Kerala Catholic News, All News Articles, Church News, Catholic Announcements, KRCBC Updates" />
+        <meta property="og:title" content="All News - KRCBC" />
+        <meta property="og:description" content="Browse all news articles from the Kerala Region of Catholic Bishops Conference (KRCBC). Stay informed about our latest announcements, events, and community updates." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://krcbc.in/news-listing" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="All News - KRCBC" />
+        <meta name="twitter:description" content="Browse all news articles from the Kerala Region of Catholic Bishops Conference (KRCBC). Stay informed about our latest announcements, events, and community updates." />
+        <link rel="canonical" href="https://krcbc.in/news-listing" />
+      </Helmet>
       <main className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
